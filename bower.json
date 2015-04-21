@@ -1,0 +1,21 @@
+{
+  "name": "PLOS-Subject-Area-Explorer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/travs/PLOS-Subject-Area-Explorer",
+  "main": "parser.js",
+  "authors": [
+    "travs"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-treeview": "~1.1.0"
+  }
+}
