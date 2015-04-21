@@ -50,7 +50,8 @@ fs.readFile(__dirname + '/' + filename, function(err, data) {
     }
 
 
-    console.log(treeList);
+    var outFile = thesaurusVersion + '.json';
+    fs.writeFile(outFile, JSON.stringify(treeList, null, 2));
 
   });
 });

@@ -1,0 +1,19 @@
+<!-- Required Stylesheets -->
+<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap-treeview/public/js/bootstrap-treeview.js"></script>
+<script src="parser.js"></script>
+
+<div id="tree"></div>
+
+<script>
+  function getTree() {
+  // Some logic to retrieve, or generate tree structure
+  
+  return data;
+  }
+
+  $('#tree').treeview({data: getTree()});
+</script>
