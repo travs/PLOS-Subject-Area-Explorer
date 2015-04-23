@@ -13,6 +13,7 @@ var thesaurusVersion = filename.split('.extract.xml')[0];
 var Term = function(passedTerm, termIndex){
   this.text = passedTerm.T;
   if (passedTerm.NT){
+    //there are child terms
     this.nodes = [];
     for (t of passedTerm.NT){
       var childTerm = new Term(termIndex[t], termIndex);
@@ -50,6 +51,11 @@ fs.readFile(__dirname + '/' + filename, function(err, data) {
     }
 
 
+    //make a minified version
+    var outFile = thesaurusVersion + '.min.json';
+    fs.writeFile(outFile, JSON.stringify(treeList));
+
+    //make a pretty version
     var outFile = thesaurusVersion + '.json';
     fs.writeFile(outFile, JSON.stringify(treeList, null, 2));
 
