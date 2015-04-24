@@ -7,13 +7,13 @@ Embeddable tree picker of PLOS thesaurus terms
 
 Insert something like this into your document
 
-```
+```html
 <div id="tree"></div>
 ```
 
 Now create the treeview with PLOS subject area data:
 
-```
+```js
 var URL = https://cdn.rawgit.com/travs/PLOS-Subject-Area-Explorer/master/thesaurus_latest.json;
 $.getJSON(URL, function(data){
   $('#tree').treeview({data: data});
