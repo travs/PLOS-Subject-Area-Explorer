@@ -11,14 +11,18 @@ Insert something like this into your document
 <div id="tree"></div>
 ```
 
-Now create the treeview with PLOS subject area data:
+Now create the treeview with the *latest* PLOS subject area data:
 
 ```js
-var URL = 'https://cdn.rawgit.com/travs/PLOS-Subject-Area-Explorer/master/thesaurus_latest.json';
+var sha = jQuery.ajax({url: 'https://api.github.com/repos/travs/PLOS-Subject-Area-Explorer/commits', success: function(data){
+var sha = data[0].sha;
+var URL = 'https://cdn.rawgit.com/travs/PLOS-Subject-Area-Explorer/' + sha + '/thesaurus_latest.json'
 $.getJSON(URL, function(data){
-  $('#tree').treeview({data: data});
-})
+  $('#tree').treeview({data: data, levels: 1, nodeIcon: 'glyphicon'});
+})}})
 ```
+
+Insert the above into a `<script>` element at the bottom of your page if you like, or in another script file.
 
 ##Attributions
 
