@@ -14,7 +14,7 @@ Insert something like this into your document
 Now create the treeview with PLOS subject area data:
 
 ```js
-var URL = https://cdn.rawgit.com/travs/PLOS-Subject-Area-Explorer/master/thesaurus_latest.json;
+var URL = 'https://cdn.rawgit.com/travs/PLOS-Subject-Area-Explorer/master/thesaurus_latest.json';
 $.getJSON(URL, function(data){
   $('#tree').treeview({data: data});
 })
