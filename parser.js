@@ -52,7 +52,7 @@ fs.readFile(__dirname + '/' + filename, function(err, data) {
 
 
     //make a minified version
-    var outFile = thesaurusVersion + '.min.json';
+    var outFile = 'thesaurus_latest' + '.min.json';
     fs.writeFile(outFile, JSON.stringify(treeList));
 
     //make a pretty version

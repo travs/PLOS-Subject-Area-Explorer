@@ -16,7 +16,7 @@ Now create the treeview with the *latest* PLOS subject area data:
 ```js
 var sha = jQuery.ajax({url: 'https://api.github.com/repos/travs/PLOS-Subject-Area-Explorer/commits', success: function(data){
 var sha = data[0].sha;
-var URL = 'https://cdn.rawgit.com/travs/PLOS-Subject-Area-Explorer/' + sha + '/thesaurus_latest.json'
+var URL = 'https://cdn.rawgit.com/travs/PLOS-Subject-Area-Explorer/' + sha + '/thesaurus_latest.min.json'
 $.getJSON(URL, function(data){
   $('#tree').treeview({data: data, levels: 1, nodeIcon: 'glyphicon'});
 })}})
